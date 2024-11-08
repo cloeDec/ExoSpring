@@ -25,19 +25,19 @@ public class FormateurService {
         return this.jdbcTemplate.queryForObject(sql, new FormateurWrapper(),id);
    }
 
-//    public int insert(Etudiant etudiant){
-//      String sql = "INSERT INTO Formateurs(Nom,Prenom,Email,Telephone) VALUES (?,?,?,?)";
-//      return this.jdbcTemplate.update(sql, etudiant.getNom(), etudiant.getPrenom(), etudiant.getEmail(), etudiant.getTelephone());
-//    }
+   public int insert(Formateur formateur){
+     String sql = "INSERT INTO Formateurs(Nom,Prenom,Email,Telephone) VALUES (?,?,?,?)";
+     return this.jdbcTemplate.update(sql, formateur.getNom(), formateur.getPrenom(), formateur.getEmail(), formateur.getTelephone());
+   }
 
-//    public int update(Etudiant etudiant){
-//      String sql = "UPDATE Formateurs set Nom=?,Prenom=?,Email=?,Telephone=? WHERE Id=?";
-//      return this.jdbcTemplate.update(sql, etudiant.getNom(), etudiant.getPrenom(), etudiant.getEmail(), etudiant.getTelephone(), etudiant.getId());
-//    }
+   public int update(Formateur formateur){
+     String sql = "UPDATE Formateurs set Nom=?,Prenom=?,Email=?,Telephone=? WHERE Id=?";
+     return this.jdbcTemplate.update(sql, formateur.getNom(), formateur.getPrenom(), formateur.getEmail(), formateur.getTelephone(), formateur.getId());
+   }
 
-//    public int delete(int id){
-//      String sql= "DELETE Formateurs WHERE Id=?";
-//      return this.jdbcTemplate.update(sql,id);
-//    }
+   public int delete(int id){
+     String sql= "DELETE FROM Formateurs WHERE Id=?";
+     return this.jdbcTemplate.update(sql,id);
+   }
    
 }

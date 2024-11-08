@@ -25,19 +25,19 @@ public class UeService {
         return this.jdbcTemplate.queryForObject(sql, new UeWrapper(),id);
    }
 
-//    public int insert(Etudiant etudiant){
-//      String sql = "INSERT INTO Etudiants(Nom,Prenom,Email,Telephone) VALUES (?,?,?,?)";
-//      return this.jdbcTemplate.update(sql, etudiant.getNom(), etudiant.getPrenom(), etudiant.getEmail(), etudiant.getTelephone());
-//    }
+   public int insert(Ue ue){
+     String sql = "INSERT INTO Ue(Libelle) VALUES (?)";
+     return this.jdbcTemplate.update(sql, ue.getLibelle());
+   }
 
-//    public int update(Etudiant etudiant){
-//      String sql = "UPDATE Etudiants set Nom=?,Prenom=?,Email=?,Telephone=? WHERE Id=?";
-//      return this.jdbcTemplate.update(sql, etudiant.getNom(), etudiant.getPrenom(), etudiant.getEmail(), etudiant.getTelephone(), etudiant.getId());
-//    }
+   public int update(Ue ue){
+     String sql = "UPDATE Ue set Libelle=? WHERE Id=?";
+     return this.jdbcTemplate.update(sql, ue.getLibelle(), ue.getId());
+   }
 
-//    public int delete(int id){
-//      String sql= "DELETE Etudiants WHERE Id=?";
-//      return this.jdbcTemplate.update(sql,id);
-//    }
+   public int delete(int id){
+     String sql= "DELETE FROM Ue WHERE Id=?";
+     return this.jdbcTemplate.update(sql,id);
+   }
    
 }

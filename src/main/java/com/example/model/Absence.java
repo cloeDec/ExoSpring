@@ -3,15 +3,20 @@ package com.example.model;
 public class Absence {
 
     private int id;
-    private String date_debut;
-    private String date_fin;
+    private String dateDebut;
+    private String dateFin;
     private String type;
+    private int fkEtudiant;
 
-    public Absence(int id, String date_debut, String date_fin, String type) {
+    public Absence(int id, String dateDebut, String dateFin, String type, int fkEtudiant) {
         this.id = id;
-        this.date_debut = date_debut;
-        this.date_fin = date_fin;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
         this.type = type;
+        this.fkEtudiant = fkEtudiant;
+    }
+
+    public Absence() {
     }
 
     public int getId() {
@@ -23,19 +28,19 @@ public class Absence {
     }
 
     public String getDateDebut() {
-        return date_debut;
+        return dateDebut;
     }
 
-    public void setDateDebut(String date_debut) {
-        this.date_debut = date_debut;
+    public void setDateDebut(String dateDebut) {
+        this.dateDebut = dateDebut;
     }
 
     public String getDateFin() {
-        return date_fin;
+        return dateFin;
     }
 
-    public void setDateFin(String date_fin) {
-        this.date_fin = date_fin;
+    public void setDateFin(String dateFin) {
+        this.dateFin = dateFin;
     }
 
     public String getType() {
@@ -44,6 +49,14 @@ public class Absence {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public int getFkEtudiant() {
+        return fkEtudiant;
+    }
+
+    public void setFkEtudiant(int fkEtudiant) {
+        this.fkEtudiant = fkEtudiant;
     }
 
 }

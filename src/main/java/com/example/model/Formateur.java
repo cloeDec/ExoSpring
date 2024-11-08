@@ -16,6 +16,9 @@ public class Formateur {
         this.telephone = telephone;
     }
 
+    public Formateur() {
+    }
+
     public int getId() {
         return id;
     }

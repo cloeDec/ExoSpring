@@ -19,7 +19,6 @@
     <!-- Ajouter le controller -->
     <bean id="userController" class="com.example.controller.UserController"/>
     <bean id="etudiantController" class="com.example.controller.EtudiantController"/>
-    <bean id="absenceController" class="com.example.controller.AbsenceController"/>
 
     <!-- <context:component-scan base-package="com.example.controller" />
     <mvc:annotation-driven /> -->

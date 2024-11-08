@@ -10,6 +10,9 @@ public class Ue {
         this.libelle = libelle;
     }
 
+    public Ue() {
+    }
+
     public int getId() {
         return id;
     }
@@ -18,7 +21,7 @@ public class Ue {
         this.id = id;
     }
 
-    public String getDateDebut() {
+    public String getLibelle() {
         return libelle;
     }
 

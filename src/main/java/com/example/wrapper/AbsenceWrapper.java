@@ -15,8 +15,8 @@ public class AbsenceWrapper implements RowMapper<Absence> {
             rs.getInt("Id"), 
             rs.getString("Date_Debut"), 
             rs.getString("Date_Fin"), 
-            rs.getString("Type")
+            rs.getString("Type"),
+            rs.getInt("FK_Etudiant")  // Récupération de la clé étrangère
         );
     }
-    
 }
